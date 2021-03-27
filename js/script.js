@@ -1,3 +1,10 @@
+window.addEventListener("scroll", 
+	function() {
+		var navigator = document.querySelector(".nav");
+		navigator.classList.toggle("sticky", window.scrollY > 150);
+		});
+
+
 const sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector('#arrow-left'),
   arrowRight = document.querySelector('#arrow-right');

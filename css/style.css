@@ -16,6 +16,10 @@
     background: rgb(36,13,0);
     background: linear-gradient(90deg, rgba(36,13,0,1) 0%, rgba(200,12,12,1) 22%, rgba(229,67,85,1) 48%, rgba(237,45,58,1) 73%, rgba(255,0,0,1) 100%);  
     position: relative;
+    z-index: 1000;
+  }
+  .sticky{
+    position:fixed;
   }
   
   .nav > .nav-header {
