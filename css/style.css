@@ -17,9 +17,11 @@
     background: linear-gradient(90deg, rgba(36,13,0,1) 0%, rgba(200,12,12,1) 22%, rgba(229,67,85,1) 48%, rgba(237,45,58,1) 73%, rgba(255,0,0,1) 100%);  
     position: relative;
     z-index: 1000;
+    transition: 1.5s smooth;
   }
   .sticky{
     position:fixed;
+    transition: 1.5s smooth;
   }
   
   .nav > .nav-header {
@@ -277,4 +279,80 @@
       border-radius: 5px;
   }
   
+  /** Profile Styling**/
+
+  /** Car Profile**/
+
+  body {
+    background-color: #77bfe7;
+  }
+  .image-grid {
+    text-align: left;
+    margin: 50px auto 30px;
+    height: auto;
+    max-width: 700px;
+    min-width: 250px;
+    padding: 20px; 
+    position: relative;  
+    color: #666666;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+  }
+  .image-grid img {
+    display: block;
+    margin: 0 5px;
+    float:left;
   
+  }
+  .image-description {
+    display: block;
+    float: left;
+    padding-left: 15px;
+    
+  }
+  
+  .grid-left {
+    width: 50%;
+    float: left;
+    margin-bottom: 40px;
+  }
+  .grid-right {
+    width: 50%;
+    float: right;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 26px;
+    color: #3cb3e3;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+  }
+  .cta {
+    display: block;
+    margin-left: 10px;
+  }
+  a {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3cb3e3;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  @media only screen and (width:480px;) {
+    div[class=grid-left] img {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      display:block;
+    }
+  
+  }
