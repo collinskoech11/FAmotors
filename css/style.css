@@ -220,72 +220,33 @@
 
 
   /**Our Partners Secion**/
-  body {
-    background-color:#eee;
-  }
-  .section-title h2 {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      padding-bottom: 6px;
-      color: #000;
-      letter-spacing: 0.3px;
-      padding: 0;
-  }
-  .section-title::after {
-      content: "";
-      height: 3px;
-      background: #fbb900;
-      width: 80px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
-  }
-  /****************/
-  /*	 BX-SLIDER 	*/
-  /****************/
-  section.client {
-    padding:4em 0em;
-    background-color: #eee;
-  
-  }
-  section.client .section-title {
-    margin-bottom: 6em;
-  }
-  .bx-controls {
-    position: relative;
-  }
-  .bx-wrapper .bx-pager {
-      text-align: center;
-      padding-top: 30px;
-  }
-  .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-      display: inline-block;
-      *zoom: 1;
-      *display: inline;
-  }
-  .bx-wrapper .bx-pager.bx-default-pager a {
-      background: #666;
-      text-indent: -9999px;
-      display: block;
-      width: 10px;
-      height: 10px;
-      margin: 0 5px;
-      outline: 0;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-  }
-  
+ 
+
+.square-holder {
+  padding:30px;
+  border: 1px solid #cecece;
+  align-items: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:20px;
+  background-color:#f1f1f1;
+  min-height:200px
+}
+
+.square-holder img {
+  max-width:100%;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+}
+
+.square-holder:hover img{
+  filter:none;
+}
   /** Profile Styling**/
 
   /** Car Profile**/
 
-  body {
-    background-color: #77bfe7;
-  }
   .image-grid {
     text-align: left;
     margin: 50px auto 30px;
@@ -326,7 +287,7 @@
   h1 {
     font-family: 'Gotham', sans-serif;
     font-size: 26px;
-    color: #3cb3e3;
+    color: red;
     line-height: 1.1em;
     margin-bottom: 20px;
   }
