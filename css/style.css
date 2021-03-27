@@ -348,7 +348,7 @@
     border-bottom: none;
   }
   
-  @media only screen and (width:480px;) {
+  @media only screen and (width:480px) {
     div[class=grid-left] img {
       margin-bottom: 30px;
       padding-bottom: 30px;
