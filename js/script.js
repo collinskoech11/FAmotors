@@ -1,9 +1,13 @@
+/**Navbar Scroll animation */
+
 window.addEventListener("scroll", 
 	function() {
 		var navigator = document.querySelector(".nav");
 		navigator.classList.toggle("sticky", window.scrollY > 150);
 		});
 
+
+/**Slider Animation */
 
 const sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector('#arrow-left'),
@@ -54,3 +58,16 @@ arrowRight.addEventListener('click', function() {
 });
 
 startSlide();
+
+
+
+	/**********************/
+	/*	Client carousel   */
+	/**********************/
+	$('.carousel-client').bxSlider({
+		auto: true,
+	    slideWidth: 234,
+	    minSlides: 2,
+	    maxSlides: 5,
+	    controls: false
+	});
