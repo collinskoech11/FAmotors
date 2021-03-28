@@ -71,3 +71,6 @@ $('.carousel-client').bxSlider({
 	maxSlides: 5,
 	controls: false
 });
+
+/**SErvices Page script */
+

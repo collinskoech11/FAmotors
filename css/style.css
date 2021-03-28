@@ -354,3 +354,39 @@ img {
     }
   
   }
+
+  /** Services First container**/
+
+  .mainServiceContainer{
+    padding:100px;
+  }
+  .mainServiceContainer h1{
+
+  }
+  .mainServiceContainer h1{
+
+  }
+  .servceSubContainer{
+    padding:100px;
+  }
+  .dataframe{
+    display:inline-block;
+    width:100%;
+    height:auto;
+    padding: 100px;
+  }
+  .img-con{
+    width:50%;
+    padding:2%;
+    height:auto;
+    float: left;
+ }
+ .img-con img{
+   width:80%;
+   height:300px;
+ }
+ .img-text-con{
+  width: 50%;
+  padding:30px;
+  float:left;
+ }
