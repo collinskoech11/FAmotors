@@ -42,6 +42,7 @@
   .nav > .nav-links {
     display: inline;
     float: right;
+    right:0;
     font-size: 18px;
   }
   
@@ -167,7 +168,7 @@
   }
   
   .slide1 {
-    background-image: url('https://source.unsplash.com/1000x200/?Mercedes');
+    background-image: url('https://source.unsplash.com/1000x200/?Vehicle repair');
   }
   
   .slide2 {
@@ -245,7 +246,7 @@
 }
   /** Spare Parts  Styling**/
 .sparePartContainer{
-  text-align: center;
+  text-align: center;font-family: 'Train One', cursive;
   padding: 100px;
 }
 .sparePartContainer h2{
@@ -389,4 +390,16 @@ img {
   width: 50%;
   padding:30px;
   float:left;
+ }
+ .img-text-con h2{
+  font-family: 'Train One', cursive;
+  color:red;
+ }
+ .img-text-btn{
+   width:100%;
+   height: 40px;
+   border-radius: 10px;
+   border:1px solid red;
+   font-family: 'Train One', cursive;
+   color: red;
  }
