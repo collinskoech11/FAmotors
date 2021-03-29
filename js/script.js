@@ -7,6 +7,12 @@ window.addEventListener("scroll",
 		});
 
 
+    window.addEventListener("scroll", 
+      function() {
+        var navigator = document.querySelector(".nav");
+        navigator.classList.toggle("stickyagain", window.scrollY > 300);
+        });
+
 /**Slider Animation */
 
 const sliderImages = document.querySelectorAll('.slide'),

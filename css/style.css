@@ -23,7 +23,11 @@
     position:fixed;
     transition: 1.5s smooth;
   }
-  
+  .stickyagain{
+    background: rgb(36,0,0);
+    background: rgb(238,36,36);
+    background: linear-gradient(90deg, rgba(238,36,36,1) 0%, rgba(230,139,133,1) 35%, rgba(226,36,31,1) 58%, rgba(174,21,18,0.8127626050420168) 77%, rgba(111,2,2,1) 100%);
+  }
   .nav > .nav-header {
     display: inline;
   }
