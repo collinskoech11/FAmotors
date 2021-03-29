@@ -402,8 +402,15 @@ img {
    border:1px solid red;
    font-family: 'Train One', cursive;
    color: red;
+   background-color: #fff;
+   transition: 1.5s;
  }
-
+ .img-text-btn:hover{
+   color:#fff;
+   background-color: red;
+   transition: 1.5s;
+   border:2px solid #fff;
+ }
  /** Contact Page styling*/
  iframe {
   display: block;
