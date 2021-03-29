@@ -403,3 +403,13 @@ img {
    font-family: 'Train One', cursive;
    color: red;
  }
+
+ /** Contact Page styling*/
+ iframe {
+  display: block;
+  width: 90%;
+  max-width: 60rem;
+  height: 25em;
+  margin: 2rem auto;
+  border: 1px solid black;
+}
