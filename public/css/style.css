@@ -1,0 +1,426 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    overflow-x:hidden ;
+  }
+  /**Header Styling**/
+  .nav {
+    height: 50px;
+    width: 100%;
+    background: rgb(36,13,0);
+    background: linear-gradient(90deg, rgba(36,13,0,1) 0%, rgba(200,12,12,1) 22%, rgba(229,67,85,1) 48%, rgba(237,45,58,1) 73%, rgba(255,0,0,1) 100%);  
+    position: relative;
+    z-index: 1000;
+    transition: 1.5s smooth;
+  }
+  .sticky{
+    position:fixed;
+    transition: 1.5s smooth;
+  }
+  .stickyagain{
+    background: rgb(36,0,0);
+    background: rgb(238,36,36);
+    background: linear-gradient(90deg, rgba(238,36,36,1) 0%, rgba(230,139,133,1) 35%, rgba(226,36,31,1) 58%, rgba(174,21,18,0.8127626050420168) 77%, rgba(111,2,2,1) 100%);
+  }
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    right:0;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+  /**Footer Styling**/
+  @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+  .container-fluid {
+      overflow: hidden;
+      margin-top: 250px;
+      background: rgb(36,13,0);
+      background: linear-gradient(90deg, rgba(36,13,0,1) 0%, rgba(200,12,12,1) 22%, rgba(229,67,85,1) 48%, rgba(237,45,58,1) 73%, rgba(255,0,0,1) 100%);  
+      color: #627482 !important;
+      margin-bottom: 0;
+      padding-bottom: 0
+  }
+ 
+  small {
+      font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+ 
+  .bold-text {
+      color: #989c9e !important
+  }
+ 
+  .mt-55 {
+      margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+ 
+  h3 {
+      font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+ 
+  .social {
+      font-size: 21px !important
+  }
+ 
+  .rights {
+      font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+
+  /**Image Carousel Styling**/
+  #slider,
+  .wrap,
+  .slide-content {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 300px;
+    overflow-x: hidden;
+  }
+  
+  .wrap {
+    position: relative;
+  }
+  
+  .slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .slide1 {
+    background-image: url('https://source.unsplash.com/1000x200/?Vehicle repair');
+  }
+  
+  .slide2 {
+    background-image: url('https://source.unsplash.com/1000x200/?Toyota');
+  }
+  
+  .slide3 {
+    background-image: url('https://source.unsplash.com/1000x200/?Honda');
+  }
+  
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slide-content span {
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 2px 20px rgba(0, 0, 0, 0.87);
+  }
+  
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  #arrow-left {
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 30px;
+  }
+  
+  #arrow-right {
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 30px;
+  }
+
+
+
+
+  /**Our Partners Secion**/
+ 
+
+.square-holder {
+  padding:30px;
+  border: 1px solid #cecece;
+  align-items: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:20px;
+  background-color:#f1f1f1;
+  min-height:200px
+}
+
+.square-holder img {
+  max-width:100%;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+}
+
+.square-holder:hover img{
+  filter:none;
+}
+  /** Spare Parts  Styling**/
+.sparePartContainer{
+  text-align: center;font-family: 'Train One', cursive;
+  padding: 100px;
+}
+.sparePartContainer h2{
+  color:red;
+}
+/** grid styling**/
+
+.containero {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  padding: 5px;
+  border: 3px solid black;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+  /** Car Profile**/
+
+  .image-grid {
+    text-align: left;
+    margin: 50px auto 30px;
+    height: auto;
+    max-width: 700px;
+    min-width: 250px;
+    padding: 20px; 
+    position: relative;  
+    color: #666666;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+  }
+  .image-grid img {
+    display: block;
+    margin: 0 5px;
+    float:left;
+  
+  }
+  .image-description {
+    display: block;
+    float: left;
+    padding-left: 15px;
+    
+  }
+  
+  .grid-left {
+    width: 50%;
+    float: left;
+    margin-bottom: 40px;
+  }
+  .grid-right {
+    width: 50%;
+    float: right;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 26px;
+    color: red;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+  }
+  .cta {
+    display: block;
+    margin-left: 10px;
+  }
+  a {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3cb3e3;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  @media only screen and (width:480px) {
+    div[class=grid-left] img {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      display:block;
+    }
+  
+  }
+
+  /** Services First container**/
+
+  .mainServiceContainer{
+    padding:100px;
+  }
+  .mainServiceContainer h1{
+
+  }
+  .mainServiceContainer h1{
+
+  }
+  .servceSubContainer{
+    padding:100px;
+  }
+  .dataframe{
+    display:inline-block;
+    width:100%;
+    height:auto;
+    padding: 100px;
+  }
+  .img-con{
+    width:50%;
+    padding:2%;
+    height:auto;
+    float: left;
+ }
+ .img-con img{
+   width:80%;
+   height:300px;
+ }
+ .img-text-con{
+  width: 50%;
+  padding:30px;
+  float:left;
+ }
+ .img-text-con h2{
+  font-family: 'Train One', cursive;
+  color:red;
+ }
+ .img-text-btn{
+   width:100%;
+   height: 40px;
+   border-radius: 10px;
+   border:1px solid red;
+   font-family: 'Train One', cursive;
+   color: red;
+   background-color: #fff;
+   transition: 1.5s;
+ }
+ .img-text-btn:hover{
+   color:#fff;
+   background-color: red;
+   transition: 1.5s;
+   border:2px solid #fff;
+ }
+ /** Contact Page styling*/
+ iframe {
+  display: block;
+  width: 90%;
+  max-width: 60rem;
+  height: 25em;
+  margin: 2rem auto;
+  border: 1px solid black;
+}
