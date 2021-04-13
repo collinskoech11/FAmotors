@@ -1,4 +1,6 @@
-/**Navbar Scroll animation */
+/**Navbar Scroll animation
+ * =====================================================================================================
+ */
 
 window.addEventListener("scroll", 
 	function() {
@@ -13,59 +15,44 @@ window.addEventListener("scroll",
         navigator.classList.toggle("stickyagain", window.scrollY > 300);
         });
 
-/**Slider Animation */
+/**Slider Animation 
+ * ============================================================================================================================
+*/
+const delay = 3000; //ms
 
-const sliderImages = document.querySelectorAll('.slide'),
-  arrowLeft = document.querySelector('#arrow-left'),
-  arrowRight = document.querySelector('#arrow-right');
-
-let current = 0;
-
-// Init slider
-function reset() {
-  for (let i = 0; i < sliderImages.length; i++) {
-    sliderImages[i].style.display = 'none';
-  }
-}
-
-function startSlide() {
-  reset();
-  sliderImages[0].style.display = 'block';
-}
-
-// Show previous image
-function slideLeft() {
-  reset();
-  sliderImages[current - 1].style.display = 'block';
-  current--;
-}
-
-// Show next image
-function slideRight() {
-  reset();
-  sliderImages[current + 1].style.display = 'block';
-  current++;
-}
-
-// Left arrow click
-arrowLeft.addEventListener('click', function() {
-  if (current === 0) {
-    current = sliderImages.length;
-  }
-  slideLeft();
-});
-
-// Right arrow click
-arrowRight.addEventListener('click', function() {
-  if (current === sliderImages.length - 1) {
-    current = -1;
-  }
-  slideRight();
-});
-
-startSlide();
-
-
+ const slides = document.querySelector(".slides");
+ const slidesCount = slides.childElementCount;
+ const maxLeft = (slidesCount - 1) * 100 * -1;
+ 
+ let current = 0;
+ 
+ function changeSlide(next = true) {
+   if (next) {
+     current += current > maxLeft ? -100 : current * -1;
+   } else {
+     current = current < 0 ? current + 100 : maxLeft;
+   }
+ 
+   slides.style.left = current + "%";
+ }
+ 
+ let autoChange = setInterval(changeSlide, delay);
+ const restart = function() {
+   clearInterval(autoChange);
+   autoChange = setInterval(changeSlide, delay);
+ };
+ 
+ // Controls
+ document.querySelector(".next-slide").addEventListener("click", function() {
+   changeSlide();
+   restart();
+ });
+ 
+ document.querySelector(".prev-slide").addEventListener("click", function() {
+   changeSlide(false);
+   restart();
+ });
+ 
 
 	/**********************/
 	/*	Client carousel   */
