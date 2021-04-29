@@ -209,7 +209,11 @@
 
   /**Our Partners Secion**/
  
-
+@media screen and (max-width:800px){
+  .section{
+    display:none;
+  }
+}
 .square-holder {
   padding:30px;
   border: 1px solid #cecece;
@@ -406,4 +410,12 @@ img {
   height: 25em;
   margin: 2rem auto;
   border: 1px solid black;
+}
+
+
+
+@media screen and (max-width:800px){
+  .sparePartContainer{
+    padding:0;
+  }
 }
